@@ -23,6 +23,17 @@ describe( 'index.js', () => {
       ]);
     } );
   } );
+  
+  function writeCards(names, surprise) {
+    const messages = [];
+  
+    for (let i = 0; i < names.length; i++) {
+      const message = `Thank you, ${names[i]}, for the wonderful surprise gift!`;
+      messages.push(message);
+    }
+  
+    return messages;
+  }
 
   describe( 'countDown()', () => {
     afterEach( () => {
@@ -50,3 +61,8 @@ describe( 'index.js', () => {
     } );
   } );
 } );
+function countDown(number) {
+  for (let i = number; i >= 0; i--) {
+    console.log(i);
+  }
+}
